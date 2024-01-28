@@ -49,12 +49,10 @@ async function createTxt(text) {
   try{    
     const dateHour = new Date();
     const fileName = dateHour.toISOString().split(/[-T:.Z]/).join('');
-
-    // Encontrar caminho; Dá nome ao arquivo baseado em hora e data
-    const desktopPath = path.join(os.homedir(), 'Desktop');
-    const filePath = path.join(desktopPath, `${fileName}_output.txt`);
     
-    // Salva a txt no Desktop
+    const desktopPath = path.join(os.homedir(), 'Desktop');
+    const filePath = path.join(desktopPath, `${fileName}_output.txt`);    
+ 
     fs.writeFileSync(filePath, String(text), 'utf8');
     await loading.loading("\x1b[36mGerando arquivo de texto\x1b[0m");
     loading.sleep(900);
@@ -70,16 +68,13 @@ async function createXLSX(text) {
   try{    
     const dateHour = new Date();
     const fileName = dateHour.toISOString().split(/[-T:.Z]/).join('');
-
-    // Encontrar caminho; Dá nome ao arquivo baseado em hora e data
+    
     const desktopPath = path.join(os.homedir(), 'Desktop');
     const filePath = path.join(desktopPath, `${fileName}_output.xlsx`);
-
-    // Instância de uma pasta de trabalho do Excel; Cria planilha Sheet 1
+   
     const excelInstance = new exceljs.Workbook();
-    const worksheet = excelInstance.addWorksheet('Sheet 1');
-    
-    // Preenche as células da planilha com os dados
+    const worksheet = excelInstance.addWorksheet('Sheet 1');    
+   
     text.forEach((line, index) => {      
       const lines = line.split('\n');
       worksheet.addRow(["ID", "CONTEUDO"]);
@@ -87,7 +82,7 @@ async function createXLSX(text) {
         worksheet.addRow([i+1, line]); 
       });
     });
-    // Salva a planilha no Desktop
+   
     await excelInstance.xlsx.writeFile(filePath);
     await loading.loading("\x1b[36mGerando arquivo XLSX\x1b[0m");
     loading.sleep(900);
