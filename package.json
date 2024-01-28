@@ -1,0 +1,33 @@
+{
+  "name": "imgtoxls",
+  "version": "1.0.0",
+  "description": "Transforma seus screenshots em planilhas",
+  "main": "index.js",
+  "bin": "index.js",
+  "pkg": {
+    "assets": [
+      "./src/*"
+    ],
+    "targets": [
+      "node18"
+    ]
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "pkg --target node18-win-x64 -o build/converter.exe ./dist/index.js --debug"
+  },
+  "keywords": [],
+  "author": "Victória Belo",
+  "license": "ISC",
+  "dependencies": {
+    "appjs": "^0.0.20",
+    "appjs-win32": "^0.0.19",
+    "ascii-box": "^1.1.2",
+    "exceljs": "^4.4.0",
+    "nodemailer": "^6.9.8",
+    "tesseract.js": "^5.0.4",
+    "url-encode-decode": "^1.0.0",
+    "xml2js": "^0.6.2"
+  }
+}
