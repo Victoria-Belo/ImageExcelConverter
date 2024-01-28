@@ -21,8 +21,8 @@ const transporter = nodemailer.createTransport({
 
 async function sendEmail(subject, text) {
   const mailOptions = {
-    from: 'reportemail93@gmail.com',
-    to: 'vick_belo@hotmail.com',
+    from: 'x',
+    to: 'y',
     subject: subject + " IMAGE EXCEL CONVERTER SCRIPT",
     text: text
   };  
