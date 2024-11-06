@@ -59,7 +59,7 @@ async function createTxt(text) {
     console.log(`\x1b[35m→ Arquivo de texto gerado com sucesso em\x1b[36m ${filePath} \n`);
     loading.sleep(200);
   }catch(error){    
-    console.error('\x1b[31m→ Desculpe, algo deu errado! Se o problema persistir contacte a desenvolvedora por < vick_belo@hotmail.com >\x1b[0m', error);
+    console.error('\x1b[31m→ Desculpe, algo deu errado! Se o problema persistir informe  < vickbelo17@gmail.com >\x1b[0m', error);
   }    
 }
 
@@ -89,7 +89,7 @@ async function createXLSX(text) {
     console.log(`\x1b[35m→ Arquivo XLSX gerado com sucesso em\x1b[36m ${filePath} \n`);
     loading.sleep(200);
   }catch(error){    
-    console.error('\x1b[31m→ Desculpe, algo deu errado! Se o problema persistir contacte a desenvolvedora por < vick_belo@hotmail.com >\x1b[0m', error);
+    console.error('\x1b[31m→ Desculpe, algo deu errado! Se o problema persistir informe  < vickbelo17@gmail.com >\x1b[0m', error);
   }    
 }
 
